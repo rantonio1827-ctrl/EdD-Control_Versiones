@@ -8,6 +8,10 @@ public class NotificationManager {
 
     public void notify(String message) {
         Logger.log("Iniciando proceso de notificaion");
+        
+        if (message == null || message.trim().isEmpty()) {
+            throw new IllegalArgumentException("El mensaje no puede estar vacio");
+        }
         service.send(message);
     }
 }
