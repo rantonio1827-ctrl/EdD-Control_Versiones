@@ -7,7 +7,7 @@ public class NotificationManager {
     }
 
     public void notify(String message) {
+        Logger.log("Iniciando proceso de notificaion");
         service.send(message);
     }
-
 }
